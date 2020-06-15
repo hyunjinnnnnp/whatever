@@ -5,8 +5,8 @@
 }
 
 .obj__body {
-  top: 40px;
-  height: 40px;
+  top: 100px;
+  height: 100px;
 
   position: relative;
   bottom: 10px;
@@ -21,6 +21,7 @@
 .obj .obj__eyes {
   position: absolute;
   display: flex;
+  transition: all 2s;
 }
 .obj .eye {
   width: 6px;
@@ -29,3 +30,48 @@
   background-color: black;
   border: 4px solid white;
 }
+.obj .obj__legs{
+ position: absolute;
+top:30px;
+display: flex;
+width:100%;
+justify-content: space-evenly;
+}
+.obj .left-leg{
+  width:5px;
+  height:10px;
+  background-color: white;
+}
+.obj .right-leg{
+  width:5px;
+  height:10px;
+  background-color: white;
+}
+.turn{
+
+  left:10px;  
+  transform: scaleX(.7);
+  
+}
+
+.walkLeftLeg{
+  animation: 2s leftLegAnim infinite;
+}
+@keyframes leftLegAnim{
+  0%{transform: rotate(20deg);}
+ 30%{transform: rotate(0deg);}
+ 60%{transform: rotate(-20deg);}
+ 100%{transform: rotate(0);}
+}
+.walkRightLeg{
+animation: 2s rightLegAnim  infinite .4s;
+}
+@keyframes rightLegAnim{
+  0%{transform: rotate(20deg);}
+  30%{transform:  rotate(0deg);}
+  60%{transform:  rotate(-20deg);}
+  100%{transform: rotate(0);}
+ }
+ .objMove{
+   transform: translateX(10px);
+ }

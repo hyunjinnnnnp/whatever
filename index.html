@@ -7,20 +7,25 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="screen">
+    <div class="screen" width="480" height="320">
+      
       <div class="obj js-obj">
         <div class="obj__body">
-          <div class="obj__eyes">
+          <div class="obj__eyes js-objEyes">
             <div class="eye"></div>
             <div class="eye"></div>
           </div>
-          <div class="obj__legs">
-            <div class="leg"></div>
-            <div class="leg"></div>
+          <div class="obj__legs js-objLegs">
+            <div class="left-leg js-left-leg"></div>
+            <div class="right-leg js-right-leg"></div>
           </div>
         </div>
       </div>
-    </div>
+    </canvas>
+
+    <input type="button" value="turn" class="js-turnBtn">
+    <input type="button" value="right" class="js-moveRightBtn">
+
     <script src="index.js"></script>
   </body>
 </html>
